@@ -22,4 +22,27 @@
  */
 
 
+#include <stdio.h>
+#include <unistd.h>
+
+#include "pi-logger-thread.h"
+
+static int g_count = 0;
+
+void* pi_logger_thread( void* arg )
+{
+    int i = 100;
+    printf( "pi_logger_thread: created\n" );
+    g_count++;
+    
+    while( i > 0 )
+    {
+        printf( "pi_logger_thread: thread: %d, event %d\n", g_count, i );
+        sleep( 1 );
+        i--;
+    }
+    
+    return (void* ) 0;
+}
+
 

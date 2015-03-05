@@ -25,4 +25,6 @@
 #ifndef __PI_LOGGER_THREAD_H
 #define __PI_LOGGER_THREAD_H
 
+void* pi_logger_thread( void* arg );
+
 #endif /* __PI_LOGGER_THREAD_H */

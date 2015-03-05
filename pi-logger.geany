@@ -23,14 +23,24 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=6
-FILE_NAME_0=5;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fconfig%2Ffolder.txt;0;4
-FILE_NAME_1=6;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fdata%2Ffolder.txt;0;4
-FILE_NAME_2=5;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fdoc%2Ffolder.txt;0;4
-FILE_NAME_3=6;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Finclude%2Ffolder.txt;0;4
-FILE_NAME_4=6;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fsrc%2Ffolder.txt;0;4
-FILE_NAME_5=6;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Ftest%2Ffolder.txt;0;4
-FILE_NAME_6=6;None;0;EUTF-8;1;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Ffolder.txt;0;4
+current_page=1
+FILE_NAME_0=832;C;0;EUTF-8;0;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fsrc%2Fpi-logger-thread.c;0;4
+FILE_NAME_1=853;C;0;EUTF-8;0;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Fsrc%2Fpi-logger.c;0;4
+FILE_NAME_2=0;C;0;EUTF-8;0;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Finclude%2Fpi-logger.h;0;4
+FILE_NAME_3=915;C;0;EUTF-8;0;1;0;%2Fhome%2Fzake%2FProjects%2Fpi-logger%2Finclude%2Fpi-logger-thread.h;0;4
+FILE_NAME_4=6817;C;0;EUTF-8;0;1;0;%2Fusr%2Finclude%2Fpthread.h;0;4
 
 [VTE]
 last_dir=/home/zake
+
+[build-menu]
+CFT_00_LB=_Compile
+CFT_00_CM=gcc -Wall -I include -lpthread -c "src/%f"
+CFT_00_WD=/home/zake/Projects/pi-logger/
+CFT_01_LB=_Build
+CFT_01_CM=gcc -Wall -I include -lpthread -o "include/%e" "src/%f"
+CFT_01_WD=/home/zake/Projects/pi-logger/
+CFT_02_LB=
+CFT_02_CM=
+CFT_02_WD=
+filetypes=C;
