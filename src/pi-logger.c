@@ -29,10 +29,8 @@
 
 #include "pi-logger.h"
 #include "pi-logger-thread.h"
+#include "pi-logger-common.h"
 
-/* Error codes */
-#define PI_LOGGER_ERROR_NONE                        0
-#define PI_LOGGER_ERROR_MAX_THREAD_COUNT            1
 
 /* Constants */
 #define PI_LOGGER_MAX_THREAD_COUNT 3
@@ -76,7 +74,7 @@ static int pi_logger_create_thread_and_add_to_list(
         if ( PI_LOGGER_MAX_THREAD_COUNT ==
             list->pi_logger_thread_count )
         {
-            rc = PI_LOGGER_ERROR_MAX_THREAD_COUNT;
+            rc = PI_LOGGER_ERROR_MAX_SENSOR_COUNT;
         }
         else
         {
@@ -102,6 +100,37 @@ static int pi_logger_remove_thread_from_list(
             
         }
     }
+}
+
+static int pi_logger_detect_sensors( void )
+{
+    int rc = PI_LOGGER_ERROR_NONE;
+    
+    /* TO_DO */
+    
+    return rc;
+}
+
+static void pi_logger_show_sensors( void )
+{
+    printf( "Installed sensors: %d\n" );
+    printf( "-----------------------------------------------------\n" );
+    printf( "Id Name                 Status           Last value  \n" );
+    printf( "-----------------------------------------------------\n" );
+    printf( "%d %s %s %f\n" );
+}
+
+static void pi_logger_show_sensor_details( unsigned int sensor_id )
+{
+/*    printf( "Sensor details: %d", sensor_id );
+    printf( "-----------------------------------------------------\n" );
+    printf( "Id: %d\n", sensor_id );
+    printf( "Name: %s\n", sensor_name );
+    printf( "Status: %s\n", sensor_status );    
+    printf( "Manufacturer code: %d\n", sensor_hw_id );
+    printf( "Current value: %d\n", sensor_value );
+    printf( "Highest value: %d\n", sensor_value_max );
+    printf( "Lowest value: %d\n", sensor_value_min ); */
 }
 
 int main(int argc, char **argv)
